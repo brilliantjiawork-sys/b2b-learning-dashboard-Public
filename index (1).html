@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="海外B2B社媒运营8天学习、输出与面试评估看板">
+  <title>海外B2B内容营销｜8天执行看板</title>
+  <style>
+    :root{
+      --paper:#f7f5f0;--card:#fffefa;--ink:#24313a;--muted:#74808a;--line:#e8e3da;
+      --blue:#c9ddea;--pink:#f1d2d7;--green:#cce6d8;--sand:#f2dfb9;--lav:#ddd5ed;--mist:#d7e2ef;
+      --red:#b84955;--red-bg:#fff4f4;--dark:#2f3b43;--shadow:0 16px 48px rgba(50,55,60,.07)
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+    button,input,textarea,select{font:inherit}.shell{max-width:1180px;margin:auto;padding:28px 20px 88px}
+    .hero{display:grid;grid-template-columns:1.35fr .65fr;gap:26px;align-items:start;padding:22px 32px;background:linear-gradient(135deg,#fffefa 0%,#f3eee6 100%);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow)}
+    .eyebrow{margin:0 0 8px;color:#8a7969;font-size:12px;font-weight:800;letter-spacing:.16em}.hero h1{margin:0;font-size:clamp(28px,4vw,45px);line-height:1.12;letter-spacing:-.03em}.hero p{margin:14px 0 0;color:var(--muted);max-width:760px}.hero-side{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.metric{padding:13px;border-radius:16px;background:rgba(255,255,255,.72);border:1px solid rgba(232,227,218,.9)}.metric b{display:block;font-size:21px}.metric small{color:var(--muted)}
+    .tabs-wrap{position:sticky;top:0;z-index:20;margin:18px 0 14px;padding:9px 0;background:rgba(247,245,240,.94);backdrop-filter:blur(12px)}.tabs{display:flex;gap:8px;overflow:auto;scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}.tab{border:1px solid var(--line);background:#fffefa;color:#5e6870;padding:9px 14px;border-radius:999px;white-space:nowrap;cursor:pointer;transition:.2s}.tab:hover{transform:translateY(-1px)}.tab.active{background:var(--dark);border-color:var(--dark);color:white}
+    .top-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:21px;box-shadow:var(--shadow)}.card h2,.card h3{margin:0}.day-title{font-size:25px;line-height:1.25}.focus{color:var(--muted);margin:7px 0 0}.section-kicker{display:flex;align-items:center;gap:8px;margin-bottom:15px;font-size:12px;font-weight:800;letter-spacing:.1em;color:#8a7969;text-transform:uppercase}.section-kicker:before{content:"";width:22px;height:2px;background:#bcae9e}
+    .progress-row{display:flex;align-items:center;gap:13px;margin:18px 0 5px}.progress{height:9px;background:#ece8e1;border-radius:99px;overflow:hidden;flex:1}.progress>i{display:block;height:100%;width:0;background:#9ebdac;transition:.25s}.progress-row b{font-size:13px;color:#617269}
+    .task{display:grid;grid-template-columns:25px 1fr 112px;gap:12px;padding:15px 0;border-top:1px solid var(--line);align-items:start}.task:first-of-type{border-top:0}.task input[type=checkbox]{width:18px;height:18px;margin:4px 0 0;accent-color:#7e9f8e}.task-name{font-weight:750}.task-meta{font-size:12px;color:#8a939b;margin-top:2px}.task-desc{color:#59656e;margin-top:4px}.time-entry{display:grid;justify-items:end;gap:5px}.hours{width:100px;padding:8px 9px;border:1px solid #dcd6cc;border-radius:10px;background:#fff;text-align:center}.task-deviation{font-size:11px;color:#8a939b;white-space:nowrap}.task-deviation.over{color:#b84955}.task-deviation.under{color:#63806f}.hours:focus,textarea:focus,select:focus{outline:2px solid #bed2df;border-color:transparent}
+    .resources{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}.chip{font-size:12px;text-decoration:none;color:#59656e;border:1px solid var(--line);background:#f7f5f0;padding:5px 9px;border-radius:999px}.chip:hover{background:#eee9e0}
+    .chart-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.toggle{display:flex;background:#efebe4;border-radius:999px;padding:3px}.toggle button{border:0;background:transparent;color:#757d84;padding:5px 9px;border-radius:999px;cursor:pointer;font-size:12px}.toggle button.active{background:white;color:#344054;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .donut-wrap{display:grid;grid-template-columns:165px 1fr;gap:16px;align-items:center}.donut{width:160px;aspect-ratio:1;border-radius:50%;position:relative;background:conic-gradient(var(--blue) 0 25%,var(--pink) 25% 43.75%,var(--green) 43.75% 68.75%,var(--sand) 68.75% 81.25%,var(--lav) 81.25% 100%)}.donut:after{content:"";position:absolute;inset:38px;border-radius:50%;background:var(--card)}.donut-center{position:absolute;inset:0;z-index:1;display:grid;place-content:center;text-align:center}.donut-center b{font-size:25px}.donut-center small{color:var(--muted);font-size:11px}.legend{display:grid;gap:8px}.legend-row{display:grid;grid-template-columns:12px 1fr auto;gap:8px;align-items:center}.dot{width:12px;height:12px;border-radius:4px}.legend-row span{font-size:12px;color:#5f6870}.legend-row b{font-size:12px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}.stat{padding:10px 8px;border-radius:13px;background:#f5f2ec;text-align:center}.stat b{display:block;font-size:18px}.stat small{font-size:11px;color:var(--muted)}
+    .panel{margin-top:16px}.output-banner{border-left:5px solid var(--red);background:var(--red-bg);color:#7c3039;border-radius:16px;padding:15px 17px;margin:13px 0 18px}.output-banner b{display:block;color:var(--red);font-size:13px;letter-spacing:.08em;margin-bottom:2px}.criteria{padding:11px 13px;border-radius:13px;background:#f5f2ec;color:#66717a;font-size:13px;margin:12px 0 0}
+    .question{border-top:1px solid var(--line);padding:17px 0}.question:first-of-type{border-top:0}.q-title{display:grid;grid-template-columns:28px 1fr;gap:10px;font-weight:700}.q-no{width:26px;height:26px;border-radius:9px;background:#f0ece5;display:grid;place-content:center;font-size:12px;color:#6b746f}.q-area{display:block;width:max-content;margin:0 0 5px;padding:2px 7px;border-radius:999px;background:#f3efe8;color:#7b6f64;font-size:10px;font-weight:800;letter-spacing:.04em}.answer-tools{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:10px 0 6px}.answer-tools span{font-size:12px;color:var(--muted)}.voice{border:1px solid #ddd6cc;background:#fff;border-radius:999px;padding:6px 10px;cursor:pointer;color:#5f6870;font-size:12px}.voice.recording{border-color:#d48b94;background:#fff0f1;color:#9e3340}.answer{width:100%;min-height:88px;border:1px solid #ddd6cc;border-radius:13px;padding:11px 12px;resize:vertical;background:#fff;line-height:1.6}
+    .reflection-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.field label{display:block;font-weight:700;margin-bottom:5px}.field textarea{width:100%;min-height:112px;border:1px solid #ddd6cc;border-radius:13px;padding:11px 12px;resize:vertical;background:#fff}.hint{font-size:12px;color:var(--muted);margin-top:7px}
+    .actions{position:sticky;bottom:12px;z-index:10;display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:16px;padding:12px;border:1px solid var(--line);border-radius:18px;background:rgba(255,254,250,.94);backdrop-filter:blur(12px);box-shadow:0 14px 40px rgba(40,45,50,.12)}.btn{border:0;border-radius:11px;background:var(--dark);color:white;padding:9px 13px;cursor:pointer;font-weight:700}.btn.alt{background:#ece8e1;color:#47525a}.btn.ghost{background:white;color:#68727a;border:1px solid #ddd6cc}.save-note{margin-left:auto;color:#63806f;font-size:12px}.privacy{font-size:12px;color:var(--muted);margin-top:12px}
+    .toast{position:fixed;right:20px;bottom:82px;z-index:40;background:#2f3b43;color:#fff;padding:10px 14px;border-radius:12px;opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:none}
+    @media(max-width:860px){.hero,.top-grid{grid-template-columns:1fr}.hero-side{max-width:420px}.donut-wrap{grid-template-columns:150px 1fr}.donut{width:145px}.reflection-grid{grid-template-columns:1fr}.save-note{width:100%;margin-left:0}}
+    @media(max-width:520px){.shell{padding:16px 12px 80px}.hero{padding:20px;border-radius:22px}.card{padding:17px;border-radius:18px}.donut-wrap{grid-template-columns:1fr}.donut{margin:auto}.task{grid-template-columns:24px 1fr}.task>div:last-child{grid-column:2}.time-entry{justify-items:stretch}.hours{width:100%}.task-deviation{text-align:right}.actions{bottom:7px}.btn{flex:1}.save-note{text-align:center}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">OVERSEAS B2B CONTENT MARKETING</p>
+        <h1>8天学习、输出与面试看板</h1>
+        <p>目标不是成为更熟练的发布执行者，而是建立对海外买家、采购决策、内容价值与转化链路的判断力。</p>
+      </div>
+      <div class="hero-side">
+        <div class="metric"><b>6.5h</b><small>每日学习含输出</small></div>
+        <div class="metric"><b>50m</b><small>与豆包模拟面试</small></div>
+        <div class="metric"><b>40m</b><small>面试复盘</small></div>
+        <div class="metric"><b id="heroProgress">0%</b><small>当天完成度</small></div>
+      </div>
+    </header>
+
+    <div class="tabs-wrap"><nav class="tabs" id="tabs" aria-label="选择日期"></nav></div>
+    <section id="app"></section>
+    <div class="toast" id="toast"></div>
+  </main>
+
+  <script>
+    const dayData = [
+      {
+        date:'7月19日', title:'海外B2B买家决策全链路', platformLabel:'四平台0→1',
+        focus:'从“发内容”切换到“内容如何进入海外买家的自助研究与供应商筛选”。',
+        tasks:{core:'理解需求触发、自助研究、短名单、联系销售和最终选择。',yt:'判断YouTube在B2B中的作用：教育、搜索、验证与推动下一步。',platform:'建立LinkedIn、Facebook、X、YouTube的0→1共同框架。'},
+        resources:[['6sense Buyer Report','https://6sense.com/science-of-b2b/buyer-experience-report-2025/'],['HubSpot YouTube Course','https://academy.hubspot.com/courses/youtube-marketing']],
+        learnOutput:'用5分钟向CMO解释：海外B2B买家在联系销售之前做了什么，内容如何影响短名单。',
+        learnQs:[
+          '一家工业AI公司准备进入欧洲市场、品牌认知接近零。请画出买家从问题产生到供应商短名单的路径；每一步由谁参与、需要什么信息、内容能影响什么？',
+          'YouTube在海外B2B买家的自助研究中分别承担教育、搜索承接、供应商验证和推动下一步的什么职责？每一项请给一个内容例子。',
+          '如果由你启动LinkedIn、Facebook、X和YouTube，怎样从业务目标、账号资产、权限安全、品牌资料、首批内容到数据验证安排完整顺序？',
+          '销售负责人说“不能立刻产生询盘的内容没有价值”。请结合买家路径与平台分工回应，并给出早期、中期和后期的业务信号。'
+        ],
+        interviewOutput:'完成90秒自我介绍，并解释为什么从乙方转向甲方、为什么长期想走产品营销/GTM。',
+        interviewQs:[
+          '请用90秒说明你的真实经历、目前能独立承担什么、以及下一阶段为什么必须更靠近产品、用户和销售。',
+          '客户曾反馈内容没有带来销售转化。你如何理解这个反馈？当时你缺少什么能力，现在准备怎样补？',
+          '如果入职后30天内不能直接承诺线索增长，你能给甲方市场部交付哪些可验证的价值？',
+          '请明确说出你过去工作的所有权边界：哪些由你独立完成，哪些由主管或客户决定？'
+        ], criteria:'商业理解 · 证据意识 · 职责边界 · 自我认知 · 成长潜力'
+      },
+      {
+        date:'7月20日', title:'Buying Committee与四平台0→1', platformLabel:'四平台搭建',
+        focus:'既懂海外企业怎样集体决策，也能把品牌账号作为企业资产安全搭建和交接。',
+        tasks:{core:'理解使用者、技术、业务、采购、财务和法务的权力与风险关注。',yt:'掌握频道创建、handle、品牌资料、首页结构、功能资格与权限。',platform:'掌握四平台的创建主体、权限层级、2FA、品牌资料和离职交接。'},
+        resources:[['CIPS Procurement Process','https://2tst-dxp.cips.org/intelligence-hub/procurement/procurement-process'],['YouTube Permissions','https://support.google.com/youtube/answer/9481328'],['LinkedIn Page Roles','https://www.linkedin.com/help/linkedin/answer/a550647']],
+        learnOutput:'闭卷讲清四个平台从业务目标到资产交接的完整启动顺序，而不是只背创建按钮。',
+        learnQs:[
+          '同一项B2B采购中，使用者、技术负责人、业务负责人、采购、财务和法务分别关心什么？内容如何降低每个角色的决策风险？',
+          '请按真实执行顺序说明YouTube品牌频道的创建、handle、品牌资料、首页结构、功能资格、权限与企业交接。',
+          '请为LinkedIn、Facebook、X和YouTube设计账号治理方案：创建主体、企业邮箱、管理员层级、最小权限、2FA和离职交接分别怎么做？',
+          '公司希望四个平台同时上线但团队只有两个人。你如何结合buying committee、平台角色和运营能力决定上线顺序？'
+        ],
+        interviewOutput:'准确回答简历中的“参与多平台0→1”，既不削弱真实发布经验，也不把主管工作说成自己的。',
+        interviewQs:[
+          '简历写了参与LinkedIn、Facebook、X从0到1。请逐环节说明你亲自完成、协作完成和没有负责的部分。',
+          '假设明天让你独立搭建YouTube品牌频道，请按真实执行顺序口述，并说明每一步的风险点。',
+          '为什么不能把同一条内容不加判断地同步到YouTube、LinkedIn和Facebook？请从受众意图和平台角色回答。',
+          '账号搭建后的前30天，你会先验证什么，而不是急着追求粉丝数？'
+        ], criteria:'诚实度 · 所有权意识 · 平台治理 · 业务优先级 · 风险意识'
+      },
+      {
+        date:'7月21日', title:'海外用户研究与YouTube搜索意图', platformLabel:'YouTube关键词',
+        focus:'用证据理解海外买家，不凭运营人员自己的想象写内容。',
+        tasks:{core:'学习购买触发、期望结果、决策障碍、选择标准和信息来源。',yt:'理解主题、搜索意图、长尾问题与采购阶段；SEO不是机械埋词。',platform:'用YouTube联想、竞品、Google Trends、行业社区和销售问题建立关键词证据。'},
+        resources:[['Buyer Persona Institute','https://buyerpersona.com/buyer-persona-research'],['Google Trends','https://trends.google.com/']],
+        learnOutput:'口述一套在没有直接客户访问权时仍可执行、可验证的海外B2B用户研究方法。',
+        learnQs:[
+          '你刚进入一个陌生的机器人出海公司，暂时不能访谈客户。请按证据强弱设计两周用户研究计划，并说明每种信息源能回答什么、不能回答什么。',
+          '请把一个YouTube长尾搜索词拆成：角色、场景、任务、问题严重度、采购阶段和下一步内容。',
+          '你会怎样组合YouTube搜索联想、竞品频道、Google Trends、行业社区和销售问题建立关键词证据，而不是只看搜索量？',
+          '销售访谈、CRM记录、搜索词、竞品内容和行业论坛出现矛盾时，你如何交叉验证，并决定保留或放弃一个选题？'
+        ],
+        interviewOutput:'形成一段能体现研究设计、证据交叉验证和内容应用的用户洞察回答。',
+        interviewQs:[
+          '你过去接触客户信息有限，为什么仍然认为自己适合进入甲方做海外内容？',
+          '请讲一个你从客户、销售或公开信息中发现内容关注点的真实经历；不要补充不存在的调研。',
+          '如果销售认为客户只关心价格，而技术团队认为客户只关心性能，你会怎样验证并形成内容优先级？',
+          '你如何避免把中国团队对海外客户的想象包装成“用户洞察”？'
+        ], criteria:'研究设计 · 证据分级 · 跨部门沟通 · 反偏见能力 · 洞察转内容'
+      },
+      {
+        date:'7月22日', title:'技术价值表达与YouTube内容包装', platformLabel:'YouTube发布',
+        focus:'把复杂产品准确翻译成不同决策角色关心的价值，同时保持技术可信度。',
+        tasks:{core:'学习功能→场景→客户任务→业务价值→证明的价值翻译链。',yt:'学习标题、描述、缩略图、字幕、章节和播放列表如何服务搜索与观看。',platform:'做一次轻量发布信息演练，只验证信息层级，不制作新项目方案。'},
+        resources:[['YouTube Tags Guide','https://support.google.com/youtube/answer/146402'],['Wynter Message Testing','https://wynter.com/post/what-is-message-testing']],
+        learnOutput:'选择一个通用技术功能，分别向最终使用者、技术决策者和经济决策者解释价值与证明。',
+        learnQs:[
+          '同一项技术能力，使用者、技术负责人和业务负责人分别担心什么？请写出三套价值表达，但保持同一事实基础。',
+          'YouTube标题和缩略图需要提高CTR，但B2B品牌不能标题党。你如何平衡吸引力、搜索意图和专业可信度？',
+          '请为一条B2B产品视频安排标题、描述前两行、章节、字幕、CTA和播放列表；每一项解决什么观看或决策问题？',
+          '产品团队只给你PRD和功能参数，且缺少ROI与客户案例。你会追问什么，并怎样建立可信度而不夸大？'
+        ],
+        interviewOutput:'在60秒内回答“如何把复杂技术转成海外客户听得懂的价值”，再接受准确性追问。',
+        interviewQs:[
+          '请先给方法，再用一个不涉及虚构结果的简短例子说明。',
+          '如果产品经理认为文案过度简化、销售认为仍然太技术化，你如何协调并验证？',
+          '你怎样判断一条价值主张是在帮助客户决策，而不是品牌自嗨？',
+          '英文内容中，哪些信息必须由产品或法务确认后才能发布？'
+        ], criteria:'价值翻译 · 信息准确 · 证据意识 · 跨团队协作 · 英文内容风险'
+      },
+      {
+        date:'7月23日', title:'采购阶段内容系统与LinkedIn', platformLabel:'LinkedIn数据',
+        focus:'从内容形式思维升级为“角色×采购阶段×决策任务”的内容系统。',
+        tasks:{core:'区分问题认知、方案比较、供应商验证和采购决策。',yt:'理解行业教育、FAQ、产品演示、客户案例和网络研讨会的不同职责。',platform:'学习LinkedIn内容、访客、关注者、搜索、竞品与线索数据。'},
+        resources:[['LinkedIn B2B Institute','https://business.linkedin.com/advertise/resources/b2b-institute/b2b-research'],['LinkedIn Page Analytics','https://www.linkedin.com/help/linkedin/answer/a565590']],
+        learnOutput:'口述一套内容判断框架：为谁、解决哪一步决策、需要什么证据、推动什么下一步。',
+        learnQs:[
+          '如果品牌只发布产品功能和展会新闻，内容系统会在哪些采购阶段出现空白？你会怎样补，而不是简单增加发布量？',
+          '行业教育、FAQ、产品演示、客户案例和网络研讨会在YouTube频道中分别服务哪个采购阶段与决策任务？',
+          'LinkedIn高互动，但访问者职位与目标买家不匹配。你会查看哪些内容、访客、关注者、搜索或线索数据，并按什么顺序诊断？',
+          '品牌建设内容与线索获取内容如何在YouTube和LinkedIn同时存在？请说明不同目标、证据、CTA、指标和时间尺度。'
+        ],
+        interviewOutput:'用真实LinkedIn经历回答目标、职责、行动、结果、判断和局限，并正面回应转化不足。',
+        interviewQs:[
+          '请讲最能代表你LinkedIn能力的一段经历。数字之外，你做出了什么判断？',
+          '客户说内容不能带来销售转化。你当时怎样处理？如果现在重做分析，你会先向哪些人要什么数据？',
+          '你过去主要看曝光、互动、访问和粉丝增长。如何避免把这些指标包装成业务成果？',
+          '如果入职后发现现有LinkedIn粉丝增长不错但目标账户渗透很低，你的前两步是什么？'
+        ], criteria:'内容系统 · 数据解释 · 业务诚实 · 问题诊断 · LinkedIn专业度'
+      },
+      {
+        date:'7月24日', title:'内容转化链与Facebook / YouTube数据', platformLabel:'Facebook数据',
+        focus:'用数据定位内容链路断点，而不是把所有问题归结为“内容不够好”。',
+        tasks:{core:'学习内容→CTA→落地页→行为信号→线索→销售跟进；区分影响与归因。',yt:'学习impressions、CTR、watch time、retention和traffic sources。',platform:'熟悉Meta Business Suite中的触达、互动、视频观看与链接点击。'},
+        resources:[['YouTube Analytics','https://support.google.com/youtube/answer/9002587'],['Meta Business Suite','https://www.facebook.com/business/help/205614130852988']],
+        learnOutput:'面对一个结果，按“现象→链路位置→原因假设→验证数据→下一步动作”完成诊断。',
+        learnQs:[
+          '请画出内容→CTA→落地页→行为信号→线索→销售跟进的完整链路，并区分社媒能够影响、能够测量和不能独占归因的结果。',
+          'YouTube曝光上涨但CTR下降，或CTR高但前30秒留存陡降，分别说明什么？请给出有优先级的假设与验证数据。',
+          'Facebook互动不错但官网访问没有增长。可能是内容、CTA、受众还是测量问题？你如何排查？',
+          '社媒内容参与了客户决策，但无法证明直接带来成交。你会向CMO汇报哪些指标，避免过度归因？'
+        ],
+        interviewOutput:'回答“内容不能直接保证成交，如何证明它对获客有价值”，体现指标层级与归因边界。',
+        interviewQs:[
+          '请区分曝光、参与、意向、线索和成交，并说明社媒运营对哪几层承担主要责任。',
+          '高播放量但没有询盘，是内容失败吗？你需要哪些上下文才能判断？',
+          '如果销售否认社媒线索价值、社媒团队认为销售跟进慢，你如何建立共同事实？',
+          '预算有限时，你会优先改善内容、落地页还是追踪？请说明决策条件。'
+        ], criteria:'漏斗诊断 · 指标层级 · 归因边界 · 优先级 · 与销售建立共同事实'
+      },
+      {
+        date:'7月25日', title:'内容—销售反馈闭环与跨平台诊断', platformLabel:'跨平台诊断',
+        focus:'让内容生产从单向发布变成基于销售与买家信号持续学习的系统。',
+        tasks:{core:'从销售高频问题生成选题，把行为信号交给销售，再用线索质量优化内容。',yt:'学习描述链接、置顶评论、CTA、UTM、落地页行为和线索信号。',platform:'比较YouTube搜索/观看、LinkedIn角色/线索、Facebook触达/点击。'},
+        resources:[['Exit Five Podcast','https://exitfive.com/podcast/'],['Google Campaign URL Builder','https://ga-dev-tools.google/campaign-url-builder/']],
+        learnOutput:'设计轻量内容—销售闭环：输入、交接标准、反馈节奏、责任人和下一轮优化。',
+        learnQs:[
+          '请设计一个不增加大量会议的内容—销售反馈机制：从销售高频问题到选题，从行为信号交接到线索质量反馈，谁负责、多久一次、怎样回到下一轮内容？',
+          'YouTube描述链接、置顶评论、CTA、UTM和落地页分别承担什么作用？你如何判断视频带来的访问和后续行为？',
+          '同一主题在YouTube观看好、LinkedIn目标账户点击弱、Facebook互动高。你如何解释，不急着判断哪个平台更好？',
+          '结合销售反馈与跨平台数据，什么情况下应该停止一个内容方向？什么情况下只是需要修改表达、分发或承接？'
+        ],
+        interviewOutput:'完成两道数据case：高曝光低转化、互动高但线索差；每题给出验证顺序。',
+        interviewQs:[
+          '高曝光低转化，请先定义转化发生在哪一步，再给出前三个假设和需要的数据。',
+          '互动高但线索质量差，你如何区分受众错、内容承诺错和销售资格标准错？',
+          '如果你与销售对线索质量判断不一致，最终由谁定义？怎样避免互相甩锅？',
+          '你如何证明自己不是只会看后台数据，而能把数据转成业务决策？'
+        ], criteria:'闭环设计 · 跨平台解释 · 假设验证 · 销售协作 · 业务决策能力'
+      },
+      {
+        date:'7月26日', title:'个人方法论与甲方岗位潜力评估', platformLabel:'平台综合复盘',
+        focus:'把一周知识压缩成可以迁移到机器人、新能源、工业科技或政府项目的通用方法。',
+        tasks:{core:'闭卷整理市场证据→买家洞察→价值信息→内容→行动→销售反馈→优化。',yt:'复盘频道定位、搜索意图、发布配置、内容结构和数据诊断。',platform:'口述四平台0→1，并比较YouTube、LinkedIn和Facebook的B2B职责。'},
+        resources:[['本周6sense资料','https://6sense.com/science-of-b2b/buyer-experience-report-2025/'],['LinkedIn B2B Research','https://business.linkedin.com/advertise/resources/b2b-institute/b2b-research']],
+        learnOutput:'用5分钟向甲方CMO讲清自己的海外B2B内容营销方法，以及如何适配不同产业。',
+        learnQs:[
+          '进入一个完全陌生的B2B行业，你如何在30天内建立对市场、买家和产品的基本判断？请说明先后顺序与输出。',
+          '请完整复盘YouTube方法：频道定位、搜索意图、发布配置、内容结构、观看数据、CTA与转化信号之间是什么关系？',
+          '请闭卷讲清LinkedIn、Facebook、X和YouTube从0→1的共同流程，并比较YouTube、LinkedIn和Facebook在B2B决策链中的不同职责。',
+          '把本周方法压缩成“用户证据→价值信息→内容→行动→销售反馈→优化”，并说明机器人、新能源和政府项目中哪些可迁移、哪些必须重调研。'
+        ],
+        interviewOutput:'使用一份真实JD完成完整面试；只讲真实经历，同时表现学习速度、商业判断和成长潜力。',
+        interviewQs:[
+          '为什么你目前只有较短经验，甲方仍然值得给你机会？请用能力证据回答，而不是只说愿意学习。',
+          '岗位要求平台、内容、数据、线索和跨部门协作。哪些你能立即承担，哪些需要在岗补齐？',
+          '请讲一个判断失误或结果不理想的真实经历：你如何发现、如何调整、学到了什么？',
+          '如果入职90天后CMO问“你的内容给业务带来了什么”，你希望能拿出哪几类证据？'
+        ], criteria:'方法迁移 · 学习速度 · 商业判断 · 真实自省 · 岗位潜力'
+      }
+    ];
+
+    const blocks=[
+      {id:'core',time:'09:00–11:00',name:'海外B2B核心',planned:2,color:'var(--blue)'},
+      {id:'yt',time:'11:00–12:30',name:'YouTube / SEO',planned:1.5,color:'var(--pink)'},
+      {id:'platform',time:'14:00–16:00',name:'平台 / 数据',planned:2,color:'var(--green)'},
+      {id:'output',time:'16:00–17:00',name:'学习输出',planned:1,color:'var(--sand)'},
+      {id:'interview',time:'17:00–17:50',name:'与豆包模拟面试',planned:50/60,color:'var(--lav)'},
+      {id:'review',time:'17:50–18:30',name:'面试复盘',planned:40/60,color:'var(--mist)'}
+    ];
+    const STORAGE='b2b-content-dashboard-v4';
+    let state=JSON.parse(localStorage.getItem(STORAGE)||'{}');
+    let active=Number(localStorage.getItem(STORAGE+'-active')||0);
+    let chartMode='planned';
+    let recognition=null;
+
+    function ds(){if(!state[active])state[active]={tasks:{},learnAnswers:[],interviewAnswers:[]};return state[active]}
+    function save(){localStorage.setItem(STORAGE,JSON.stringify(state));localStorage.setItem(STORAGE+'-active',active);const n=document.querySelector('.save-note');if(n){n.textContent='已自动保存到本机';setTimeout(()=>n.textContent='数据仅保存在本机浏览器',1200)}}
+    function esc(s=''){return String(s).replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]))}
+    function tabs(){document.getElementById('tabs').innerHTML=dayData.map((d,i)=>`<button class="tab ${i===active?'active':''}" onclick="switchDay(${i})">${d.date}</button>`).join('')}
+    function switchDay(i){active=i;chartMode='planned';render();window.scrollTo({top:document.querySelector('.tabs-wrap').offsetTop,behavior:'smooth'})}
+    function taskDesc(d,id){if(id==='output')return '回答下方“学习结束考察”的全部问题，确保今天的海外B2B、YouTube / SEO与平台任务都有对应输出。';if(id==='interview')return d.interviewOutput;if(id==='review')return `对照“${d.criteria}”复盘豆包追问：记录最薄弱的一处，重答一道题，并写下明天只改进的一件事。`;return d.tasks[id]}
+    function render(){
+      tabs();const d=dayData[active],s=ds();
+      document.getElementById('app').innerHTML=`
+        <div class="top-grid">
+          <section class="card">
+            <div class="section-kicker">Daily plan</div>
+            <h2 class="day-title">${d.date}｜${d.title}</h2>
+            <p class="focus">${d.focus}</p>
+            <div class="progress-row"><div class="progress"><i id="progressBar"></i></div><b id="progressText">0%</b></div>
+            <div id="taskList"></div>
+            <div class="resources">${d.resources.map(r=>`<a class="chip" href="${r[1]}" target="_blank" rel="noreferrer">${r[0]} ↗</a>`).join('')}</div>
+          </section>
+          <aside class="card">
+            <div class="chart-head"><div><div class="section-kicker">Time map</div><h3>时间分配</h3></div><div class="toggle"><button class="${chartMode==='planned'?'active':''}" onclick="setChartMode('planned')">计划</button><button class="${chartMode==='actual'?'active':''}" onclick="setChartMode('actual')">实际</button></div></div>
+            <div class="donut-wrap"><div class="donut" id="donut"><div class="donut-center"><b id="chartTotal">8h</b><small id="chartCaption">计划时段</small></div></div><div class="legend" id="legend"></div></div>
+            <div class="stats" id="stats"></div>
+            <p class="privacy">每个高强度任务结束后休息10–15分钟，休息计入对应时间块。</p>
+          </aside>
+        </div>
+
+        <section class="card panel">
+          <div class="section-kicker">CMO learning review</div><h2>学习结束考察</h2>
+          <div class="output-banner"><b>学习输出</b>回答下面的全部问题，并直接在每道题下输入。问题分别考察今天不同的学习任务，不用再额外完成一个笼统的总结题。</div>
+          <div id="learnQuestions"></div><div class="criteria"><b>评估维度：</b>${d.criteria}</div>
+        </section>
+
+        <section class="card panel">
+          <div class="section-kicker">CMO interview review</div><h2>模拟面试结束考察</h2>
+          <div class="output-banner"><b>面试输出</b>${d.interviewOutput}</div>
+          <div id="interviewQuestions"></div><div class="criteria"><b>评估维度：</b>${d.criteria}</div>
+        </section>
+
+        <section class="card panel">
+          <div class="section-kicker">Reflection</div><h2>执行记录与思考</h2>
+          <div class="reflection-grid">
+            ${field('problems','执行中发现的问题','哪里卡住？是知识、资料、注意力还是估时问题？',s.problems)}
+            ${field('later','以后需要深入研究','先放进停车场，本周不临时扩大任务。',s.later)}
+            ${field('thoughts','今天形成的新判断','什么理解发生了变化？它会改变你的内容做法吗？',s.thoughts)}
+            ${field('timeReview','实际用时偏差及原因','哪些任务比预期快或慢？下一次怎样估时？',s.timeReview)}
+          </div>
+          <p class="hint">文字：直接输入。语音：点击每道题旁边的“语音回答”；若浏览器不支持，可使用电脑或手机输入法的系统听写。</p>
+        </section>
+
+        <div class="actions">
+          <button class="btn" onclick="copyDay()">复制今天给ChatGPT评估</button>
+          <button class="btn alt" onclick="copyWeek()">复制整周记录</button>
+          <button class="btn ghost" onclick="exportAll()">导出记录备份</button>
+          <span class="save-note">数据仅保存在本机浏览器</span>
+        </div>`;
+      renderTasks();renderQuestions('learn',d.learnQs);renderQuestions('interview',d.interviewQs);bindFields();updateDashboard();
+    }
+    function field(id,label,hint,value=''){return `<div class="field"><label>${label}</label><textarea data-field="${id}" placeholder="${hint}">${esc(value||'')}</textarea></div>`}
+    function tidyNumber(n){const x=Math.round(Number(n)*100)/100;return Number.isInteger(x)?String(x):String(x).replace(/0+$/,'').replace(/\.$/,'')}
+    function plannedText(hours){const minutes=Math.round(hours*60);return minutes%60===0?`${minutes/60}小时`:minutes>60?`${tidyNumber(hours)}小时`:`${minutes}分钟`}
+    function deviationInfo(actual,planned){if(actual===''||actual===undefined||actual===null)return{text:'计划偏差 —',cls:''};const diff=Number(actual)-planned;if(Math.abs(diff)<.005)return{text:'计划偏差 0h',cls:''};return{text:`计划偏差 ${diff>0?'+':'−'}${tidyNumber(Math.abs(diff))}h`,cls:diff>0?'over':'under'}}
+    function renderTasks(){const d=dayData[active],s=ds();document.getElementById('taskList').innerHTML=blocks.map(b=>{const t=s.tasks[b.id]||{},name=b.id==='platform'?d.platformLabel:b.name,dev=deviationInfo(t.actual,b.planned);return `<div class="task"><input type="checkbox" data-done="${b.id}" ${t.done?'checked':''}><div><div class="task-name">${name}</div><div class="task-meta">${b.time} · 计划${plannedText(b.planned)}</div><div class="task-desc">${taskDesc(d,b.id)}</div></div><div class="time-entry"><input class="hours" type="number" min="0" max="8" step="0.1" data-hours="${b.id}" value="${t.actual??''}" placeholder="实际h" aria-label="${name}实际用时"><div class="task-deviation ${dev.cls}" data-deviation="${b.id}">${dev.text}</div></div></div>`}).join('')}
+    function renderQuestions(type,arr){const s=ds(),key=type==='learn'?'learnAnswers':'interviewAnswers',labels=type==='learn'?['海外B2B核心','YouTube / SEO',dayData[active].platformLabel,'整合判断']:[];document.getElementById(type+'Questions').innerHTML=arr.map((q,i)=>`<div class="question"><div class="q-title"><span class="q-no">${i+1}</span><span>${labels[i]?`<small class="q-area">${labels[i]}</small>`:''}${q}</span></div><div class="answer-tools"><span>建议结构：判断 → 依据 → 风险/边界 → 下一步</span><button class="voice" data-voice="${type}-${i}" onclick="startVoice('${type}',${i},this)">🎙 语音回答</button></div><textarea class="answer" data-answer="${type}-${i}" placeholder="在这里输入，或点击语音回答…">${esc((s[key]||[])[i]||'')}</textarea></div>`).join('')}
+    function bindFields(){document.querySelectorAll('[data-done]').forEach(el=>el.onchange=()=>{const t=ds().tasks[el.dataset.done]||{};t.done=el.checked;ds().tasks[el.dataset.done]=t;save();updateDashboard()});document.querySelectorAll('[data-hours]').forEach(el=>el.oninput=()=>{const t=ds().tasks[el.dataset.hours]||{};t.actual=el.value;ds().tasks[el.dataset.hours]=t;save();updateDashboard()});document.querySelectorAll('[data-field]').forEach(el=>el.oninput=()=>{ds()[el.dataset.field]=el.value;save()});document.querySelectorAll('[data-answer]').forEach(el=>el.oninput=()=>{const [type,i]=el.dataset.answer.split('-'),key=type==='learn'?'learnAnswers':'interviewAnswers';if(!ds()[key])ds()[key]=[];ds()[key][Number(i)]=el.value;save()})}
+    function setChartMode(mode){chartMode=mode;render()}
+    function values(){const s=ds();return blocks.map(b=>chartMode==='actual'?Number((s.tasks[b.id]||{}).actual||0):b.planned)}
+    function updateDashboard(){const s=ds();let done=0;blocks.forEach(b=>{if((s.tasks[b.id]||{}).done)done++});const pct=Math.round(done/blocks.length*100);document.getElementById('progressBar').style.width=pct+'%';document.getElementById('progressText').textContent=pct+'%';document.getElementById('heroProgress').textContent=pct+'%';updateTaskDeviations();updateChart();updateStats()}
+    function updateTaskDeviations(){const s=ds();blocks.forEach(b=>{const el=document.querySelector(`[data-deviation="${b.id}"]`);if(!el)return;const info=deviationInfo((s.tasks[b.id]||{}).actual,b.planned);el.textContent=info.text;el.className=`task-deviation ${info.cls}`})}
+    function updateChart(){const vals=values(),sum=vals.reduce((a,b)=>a+b,0),colors=blocks.map(b=>b.color);let cur=0,grad=[];vals.forEach((v,i)=>{const start=sum?cur/sum*100:0;cur+=v;const end=sum?cur/sum*100:0;grad.push(`${colors[i]} ${start}% ${end}%`)});document.getElementById('donut').style.background=sum?`conic-gradient(${grad.join(',')})`:'#ece8e1';document.getElementById('chartTotal').textContent=tidyNumber(sum)+'h';document.getElementById('chartCaption').textContent=chartMode==='planned'?'计划时段':'实际记录';document.getElementById('legend').innerHTML=blocks.map((b,i)=>{const label=b.id==='platform'?dayData[active].platformLabel:b.name,pct=sum?Math.round(vals[i]/sum*100):0,value=chartMode==='planned'?plannedText(vals[i]):`${tidyNumber(vals[i])}h`;return `<div class="legend-row"><i class="dot" style="background:${colors[i]}"></i><span>${label}</span><b>${value} · ${pct}%</b></div>`}).join('')}
+    function updateStats(){const s=ds();let actual=0,filled=0,totalDiff=0;blocks.forEach(b=>{const v=(s.tasks[b.id]||{}).actual;if(v!==''&&v!==undefined&&v!==null){actual+=Number(v);totalDiff+=Number(v)-b.planned;filled++}});const diffText=filled?(totalDiff>0?'+':totalDiff<0?'−':'')+tidyNumber(Math.abs(totalDiff))+'h':'—';document.getElementById('stats').innerHTML=`<div class="stat"><b>${tidyNumber(actual)}h</b><small>实际总时长</small></div><div class="stat"><b>${diffText}</b><small>各任务偏差合计</small></div><div class="stat"><b>${filled}/${blocks.length}</b><small>已填时间块</small></div>`}
+    function startVoice(type,index,btn){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){showToast('当前浏览器不支持网页语音识别，请使用系统听写');return}if(recognition){recognition.stop();recognition=null;document.querySelectorAll('.voice').forEach(x=>x.classList.remove('recording'));return}const area=document.querySelector(`[data-answer="${type}-${index}"]`);recognition=new SR();recognition.lang=document.getElementById('speechLang')?.value||'zh-CN';recognition.continuous=false;recognition.interimResults=true;let base=area.value.trim();btn.classList.add('recording');btn.textContent='■ 停止';recognition.onresult=e=>{let final='',interim='';for(let i=e.resultIndex;i<e.results.length;i++){const t=e.results[i][0].transcript;e.results[i].isFinal?final+=t:interim+=t}area.value=[base,final||interim].filter(Boolean).join(base?'\n':'');area.dispatchEvent(new Event('input'))};recognition.onend=()=>{btn.classList.remove('recording');btn.textContent='🎙 语音回答';recognition=null};recognition.onerror=()=>showToast('没有识别成功，请重试或使用系统听写');recognition.start()}
+    function reportFor(i){const d=dayData[i],s=state[i]||{tasks:{},learnAnswers:[],interviewAnswers:[]};let totalDiff=0,filled=0;const taskLines=blocks.map(b=>{const t=(s.tasks||{})[b.id]||{},name=b.id==='platform'?d.platformLabel:b.name,has=t.actual!==''&&t.actual!==undefined&&t.actual!==null;if(has){totalDiff+=Number(t.actual)-b.planned;filled++}const dev=deviationInfo(t.actual,b.planned).text;return `- ${name}：${t.done?'已完成':'未完成'}；计划${plannedText(b.planned)}，实际${has?t.actual+'h':'未填'}；${dev}`}).join('\n');const total=filled?(totalDiff>0?'+':totalDiff<0?'−':'')+tidyNumber(Math.abs(totalDiff))+'h':'未计算';const answers=(arr,vals)=>arr.map((q,n)=>`${n+1}. ${q}\n回答：${(vals||[])[n]||'未回答'}`).join('\n\n');return `## ${d.date}｜${d.title}\n\n### 执行情况\n${taskLines}\n- 各任务计划偏差合计：${total}\n\n### 学习考察回答（即今日学习输出）\n${answers(d.learnQs,s.learnAnswers)}\n\n### 面试输出\n${d.interviewOutput}\n\n### 面试考察回答\n${answers(d.interviewQs,s.interviewAnswers)}\n\n### 执行记录\n- 执行中发现的问题：${s.problems||'未填'}\n- 待深入研究：${s.later||'未填'}\n- 今天的新判断：${s.thoughts||'未填'}\n- 实际用时偏差及原因：${s.timeReview||'未填'}\n\n### 评估要求\n请以甲方海外市场CMO视角评估我的商业理解、用户洞察、内容与转化逻辑、数据判断、表达、真实性和岗位潜力。先指出最关键的三处问题，再追问我，最后给出明天只需改进的一件事。`}
+    async function copyText(text,msg){try{await navigator.clipboard.writeText(text);showToast(msg)}catch(e){const x=document.createElement('textarea');x.value=text;document.body.appendChild(x);x.select();document.execCommand('copy');x.remove();showToast(msg)}}
+    function copyDay(){copyText(reportFor(active),'今天的完整看板已复制，直接粘贴给ChatGPT')}
+    function copyWeek(){copyText(dayData.map((_,i)=>reportFor(i)).join('\n\n---\n\n'),'整周记录已复制')}
+    function exportAll(){const blob=new Blob([JSON.stringify({version:5,exportedAt:new Date().toISOString(),state},null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='海外B2B学习看板记录备份.json';a.click();URL.revokeObjectURL(a.href);showToast('记录备份已导出')}
+    function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._timer);t._timer=setTimeout(()=>t.classList.remove('show'),2200)}
+    render();
+  </script>
+</body>
+</html>
